@@ -20,5 +20,5 @@ contribution_2014 <- janitor::clean_names(contribution_2014)
 if (!dir.exists("inputs/data")) {
   dir.create("inputs/data", recursive = TRUE)
 }
-write.csv(data, "inputs/data/unedited_data.csv", row.names = TRUE)
+write.csv(data, "inputs/data/contribution_2014.csv", row.names = TRUE)
 
