@@ -16,3 +16,9 @@ names(contribution_2014) <- col_names
 contribution_2014 <- contribution_2014[-1, ]
 head(contribution_2014)
 contribution_2014 <- janitor::clean_names(contribution_2014)
+
+if (!dir.exists("inputs/data")) {
+  dir.create("inputs/data", recursive = TRUE)
+}
+write.csv(data, "inputs/data/unedited_data.csv", row.names = TRUE)
+
